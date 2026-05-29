@@ -20,4 +20,16 @@ public class CursoEntity {
 
     @Column(name = "horas_duracion")
     private Integer horasDuracion;
+
+    public Long getIdCurso() { return idCurso; }
+    public void setIdCurso(Long idCurso) { this.idCurso = idCurso; }
+
+    public String getNombreCurso() { return nombreCurso; }
+    public void setNombreCurso(String nombreCurso) { this.nombreCurso = nombreCurso; }
+
+    public BigDecimal getPrecioUsd() { return precioUsd; }
+    public void setPrecioUsd(BigDecimal precioUsd) { this.precioUsd = precioUsd; }
+
+    public Integer getHorasDuracion() { return horasDuracion; }
+    public void setHorasDuracion(Integer horasDuracion) { this.horasDuracion = horasDuracion; }
 }
