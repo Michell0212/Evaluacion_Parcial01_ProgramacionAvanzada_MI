@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: edusmart-db
+    environment:
+      POSTGRES_DB: edusmart_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: edusmart-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@edusmart.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
